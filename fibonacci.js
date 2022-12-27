@@ -51,3 +51,20 @@ function fibo4(n) {
     
 }
 console.log(fibo4(12));
+
+
+function fiboNacci(num) {
+      const fibo = [0, 1];
+      if (typeof num !== "number") {
+        return "Please give a number";
+      } else if (num <= 2) {
+        return "Enter number greater than 2";
+      }
+      for (let i = 2; i <= num; i++) {
+        fibo[i] = fibo[i - 1] + fibo[i - 2]; // fibo[3] = 2 + 1
+    
+       
+      }
+      return fibo;
+    }
+    console.log(fiboNacci(3));

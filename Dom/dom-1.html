@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-1</title>
+</head>
+<body>
+    <section>
+        <article>
+            <h3>author-1</h3>
+            <p class="author">author-1</p>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias neque aliquid et quam unde quasi recusandae vitae quas voluptates culpa?</p>
+        </article>
+        <article class="special">
+            <h3>author-2</h3>
+            <p class="author">author-2</p>
+            <p class="description">Maxime aspernatur et amet nam qui tenetur est quae, animi distinctio modi pariatur soluta sapiente rerum. Ullam eum cupiditate odit.</p>
+        </article>
+        <article >
+            <h3>author-3</h3>
+            <p class="author">author-3</p>
+            <p class="description" t>Harum neque modi eligendi veniam! Accusamus sunt pariatur, nemo earum quisquam, repudiandae at voluptatem nostrum consequuntur itaque minus natus tempore.</p>
+        </article>
+
+        <article>
+            <h1>ami shanto</h1>
+             <ul id="gift-list">
+                <li>gift-1</li>
+                <li>gift-2</li>
+                <li>gift-3</li>
+                <li>gift-4</li>
+             </ul>
+        </article>
+    </section>
+
+    <script>
+    let authors = document.getElementsByClassName('author')
+      for (let i = 0; i < authors.length; i++) {
+        const element = authors[i];
+        element.style.backgroundColor = 'red';
+        element.innerHTML = 'ami nije'+ (i+1);
+        element.setAttribute("title","ami shanto")
+        console.log(element);
+        
+      }
+    document.querySelector('.special h3').style.backgroundColor = "green"
+     
+    // add to appentchild
+    const ul = document.getElementById("gift-list")
+    const newChild = document.createElement("li");
+    newChild.innerText = "new gift-5"
+    ul.appendChild(newChild)
+      
+    </script>
+</body>
+</html>

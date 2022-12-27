@@ -26,6 +26,13 @@ function fact2(n) {
 console.log(fact2(10));
 
 
+let arr=[1,2,3,4,5]
+let arr2 = arr.reduce((value1,value2) => { //reduce return this value
+    return value1 * value2;
+})
+console.log(arr2);
+
+
 // factorial recursive
 
 function fact3(n) {
@@ -36,3 +43,6 @@ function fact3(n) {
     }
 }
 console.log(fact3(9)); // This is 10 er factoreal 
+
+
+
