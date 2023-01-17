@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first">
+        <h2>Details</h2>
+        <ul id="second">
+            <li id="third" class="item">item-1</li>
+            <li class="item">item-2</li>
+            <li class="item">item-3</li>
+            <li class="item">item-4</li>
+            <li class="item">item-5</li>
+            
+        </ul>
+        <button id="add">add me</button>
+
+    </div>
+   
+    <script>
+        // let itemEl = document.getElementsByClassName("item")
+        // for (let i = 0; i < itemEl.length; i++) {
+        //         let itemAll = itemEl[i]                            //item dhore kora hoichilo mane child
+        //         // console.log(itemAll);
+        //       itemAll.addEventListener("click",function(event) {
+        //         event.target.parentNode.removeChild(event.target);
+            
+        //        })
+        //      }
+
+        let addBtn = document.getElementById("add");
+        addBtn.addEventListener("click",function (event) {
+            let itemParent = document.getElementById("second");
+            let newItem = document.createElement("li");
+            newItem.innerText = "new item-6";                 
+            itemParent.appendChild(newItem);
+        })
+        let itemParent = document.getElementById("second");
+        itemParent.addEventListener("click",function (event) {      //parent dhore kora hoicha 
+            event.target.parentNode.removeChild(event.target)
+            
+        }) 
+
+        
+
+        // document.getElementById("first").addEventListener("click",function (event) {
+        //     console.log("ami prothom");
+            
+        // })
+        // document.getElementById("second").addEventListener("click",function (event) {
+        //     console.log("ami second");
+            
+        // })
+        // document.getElementById("third").addEventListener("click",function (event) {
+        //     console.log("ami third");
+        //     event.stopPropagation();
+        // })
+    </script>
+</body>
+</html>

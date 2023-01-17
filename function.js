@@ -1,3 +1,20 @@
+let ar =[10,13,45,44,33,45]
+
+function oddEven(n) {
+  for (let i = 0; i < n.length; i++) {
+    const number = n[i];
+    if (number % 2 == 0) {
+       return(number,":this is even");
+    }
+    else{
+      return(number,":this is odd");
+    }
+    
+  }
+}
+
+console.log(oddEven(ar));
+
 // 1.seer to mon
 function seerToMon(seer) {
     const mon = 40;
