@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post</title>
+</head>
+<body>
+    <h1>json placeholder</h1>
+    <h2>javascript object notation</h2>
+    <ul id="showName">
+      
+    </ul>
+
+    <input id="title" type="text" placeholder="title">
+    <br>
+    <input id="body-contant" type="text" placeholder="poster mine jinish">
+    <br>
+    <button id="submit">submit</button>
+    <script>
+        document.getElementById("submit").addEventListener("click",function () {
+            const title = document.getElementById("title").value;
+            const bodyContant = document.getElementById("body-contant").value;
+            const post = {title:title, body:bodyContant};
+            nowPostToServer(post)
+            
+        })
+
+        function nowPostToServer(postInfo) {
+            fetch('https://jsonplaceholder.typicode.com/posts',{
+                method: 'post',
+                body: JSON.stringify(postInfo),
+                headers:{
+                    "cotent-type":"application/json; charset=UTF-8"
+                }
+            })
+               .then(response => response.json())
+               .then(data => displayUser(data));
+        }
+        function displayUser(users) {
+            const userNames = users.map(uesr =>user.userNames);
+            const ul = document.getElementById("showName");
+            for (let i = 0; i < userNames.length; i++) {
+                const userName = userNames[i];
+                const li =document.createElement("li");
+                li.innerText = userName;
+                ul.appendChild("li")
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>
