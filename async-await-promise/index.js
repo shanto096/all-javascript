@@ -1,4 +1,4 @@
-const suc = false
+const suc = true
 const mark = 90
 
 
@@ -18,6 +18,22 @@ function enrol() {
 }
 
 function progress() {
+    console.log('payment  hoicha');
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (mark >= 80) {
+                resolve()
+            } else {
+                reject('tumi je mark paicho tate ami certificate dite parbo na ');
+            }
+        }, 3000);
+    })
+    return promise;
+
+
+}
+
+function startClass() {
     console.log('class cholca');
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -45,6 +61,7 @@ function certificate() {
 
 enrol()
     .then(progress)
+    .then(startClass)
     .then(certificate)
     .then((res) => {
         console.log(res)
