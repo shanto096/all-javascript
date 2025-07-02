@@ -24,5 +24,9 @@ if (isNaN(v)) { //false
     console.log('number ');
 
 }
+let a = NaN;
+let b = NaN;
+
+console.log(a === b); // false ❌
 
 //NaN === NaN false হয় কারণ NaN নিজেই বলে — "আমি কারও সমান না, এমনকি নিজেরও না!"
