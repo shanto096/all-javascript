@@ -30,3 +30,9 @@ let b = NaN;
 console.log(a === b); // false ❌
 
 //NaN === NaN false হয় কারণ NaN নিজেই বলে — "আমি কারও সমান না, এমনকি নিজেরও না!"
+
+Number.isNaN(NaN); // ✅ true
+Number.isNaN('hello'); // ✅ false
+Number.isNaN(123); // ✅ false
+
+console.log(Number === NaN);
